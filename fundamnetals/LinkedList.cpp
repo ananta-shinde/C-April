@@ -58,6 +58,22 @@ Node* deletebyValue(int value,Node* head){
     return head;
 
 }
+
+Node* deleteatEnd(Node* head){
+    Node* temp = head;
+    while(temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = NULL;
+    return head;
+}
+
+Node* deleteAtStart(Node* head){
+    Node* temp = head;
+    head = head->next;
+    return head;
+}
 int main(int argc, char const *argv[])
 {
    
@@ -66,13 +82,9 @@ int main(int argc, char const *argv[])
    head = insertAtStart(50,head);
    head = insertAtEnd(60,head);
    head = insertAtStart(55,head);
-   head = deletebyValue(55,head);
+//    head = deletebyValue(55,head);
+    // head = deleteatEnd(head);
+    head = deleteAtStart(head);
    printLinkedList(head);
-   
-  
-
-
-
-   
     return 0;
 }
