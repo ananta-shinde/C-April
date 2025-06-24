@@ -8,13 +8,13 @@ class User{
     char address[100];
 
     public :
-    // User(){
-    //     id = 100;
-    // }
-    // User(char value[]){
-    //     id = 100;
-    //    strcpy(name,value);
-    // }
+    User(){
+        id = 100;
+    }
+    User(char value[]){
+        id = 100;
+       strcpy(name,value);
+    }
     User(int userid,char username[],char useremail[],char userpassword[]){
         id = userid;
        strcpy(name,username);
@@ -28,7 +28,7 @@ class User{
 };
 int main(int argc, char const *argv[])
 {
-    User* user = new User(100,"Ananta","demo@gmail","1234566");
+    User* user = new User("Aanta");
     user->display();
 
     return 0;
