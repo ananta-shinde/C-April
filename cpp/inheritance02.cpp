@@ -1,68 +1,39 @@
 #include<stdio.h>
+#include <bits/stdc++.h>
+#include<string.h>
+using namespace std;
 
-class Department{
-     Manager manager;
-     Product products[5];
-};
-
-class Employee{
+class Trainer{
 
 };
 
-class Manager:Employee{
-
+class Student{
+     char name[40];
+    bool operator==(Student* obj){
+         return (strcmp(name,obj->name) == 0);
+    }
 };
-class Product{
+class Course{
+   Trainer trainer;
+//    Student student[5];
+    vector<Student> students;
 
+    void addStudentToCourse(Student s){
+        students.push_back(s);
+    }
+
+    void deleteStudent(Student* s){
+        students.erase(find(students.begin(),students.end(),s));
+    }
+
+    void updateStudent(){
+
+    }
 };
 
-class Company{
-    int regNo;
-    char name[100];
-    char address[100];
-    Department dept_list[5];
-    Employee emp_list[5];
-
-
-    void display(){
-
-    }
-
-    void addnewDepartment(Department d){
-        dept_list[0] = d;
-    }
-
-    void printDepartmentList(){
-
-    }
-
-    void addNewEmployee(Employee e){
-
-    }
-    
-    void printEmployeeList(){
-
-    }
-
-    void updateDepartment(){
-
-    }
-
-    void updateEmployee(){
-        
-    }
 
 
 
-
-
-    
-
-
-
-
-
-};
 int main(int argc, char const *argv[])
 {
     /* code */
