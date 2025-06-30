@@ -1,7 +1,6 @@
 #include<stdio.h>
 
 class Base{
-   
 
    protected:
     int count;
