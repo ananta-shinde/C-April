@@ -35,7 +35,5 @@ int main(int argc, char const *argv[])
 
     shapePtr = new Rectangle();
     shapePtr->calculateArea();
-
-
     return 0;
 }
